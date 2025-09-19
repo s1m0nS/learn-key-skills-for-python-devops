@@ -8,10 +8,10 @@ import click
 def cli():
     """A calculator program"""
 
+
 @cli.command("add")
 @click.argument("a", type=float)
 @click.argument("b", type=float)
-
 def add_cmd(a, b):
     """ "
     Add two numbers
@@ -23,8 +23,13 @@ def add_cmd(a, b):
     # use colored output to print the results
     click.secho(f"{a} + {b} = {add(a, b)}", fg="green")
 
+
 # -----------------------------------------------------------
 
+
+@cli.command("subtract")
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def subtract_cmd(a, b):
     """
     Subtract two numbers
@@ -34,8 +39,13 @@ def subtract_cmd(a, b):
     """
     click.secho(f"{a} - {b} = {subtract(a, b)}", fg="green")
 
+
 # -----------------------------------------------------------
 
+
+@cli.command("multiply")
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def multiply_cmd(a, b):
     """
     Multiply two numbers
@@ -45,8 +55,13 @@ def multiply_cmd(a, b):
     """
     click.secho(f"{a} - {b} = {multiply(a, b)}", fg="green")
 
+
 # -----------------------------------------------------------
 
+
+@cli.command("divide")
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def divide_cmd(a, b):
     """
     Divide two numbers
@@ -59,8 +74,13 @@ def divide_cmd(a, b):
     else:
         click.secho(f"{a} / {b} = {divide(a, b)}", fg="green")
 
+
 # -----------------------------------------------------------
 
+
+@cli.command("power")
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def power_cmd(a, b):
     """
     Raise a to the power of b
